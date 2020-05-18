@@ -144,7 +144,7 @@
     !WRITE(FILLOG,*)'Calculating objective functions...'
     !CALL FOBJ        ! Error/objective Functions Evaluation
     !Write hotstart file for water balance and hydraulic state variables (only if Inertial routing is enabled) #VAS  
-    if (1==1) then
+    if (1==0) then
             call flood_WRITEHOT  
     end if
 	WRITE(FILLOG,*)'Running main model routine...'
