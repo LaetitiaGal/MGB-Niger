@@ -2,7 +2,20 @@
 
 Niger Source code with Write and/or Read initial conditions
 
-! Modifications
+! Processing
+
+	- To read initial condition, in SIMULA.f90
+	"if (1===1) then call flood_READHOT" 
+	"if (0===1) then call flood_WHRITEHOT"
+	
+	- To write initial condition 	
+	if (1===1) then call flood_WHRITEHOT" 
+	if (0===1) then call flood_READHOT"
+	
+	- To write and read initial condition 
+	"if (1===1) then call flood_WHRITEHOT" 
+	"if (1===1) then call flood_READHOT
+
 ! Modification of SIMULA.f90 
 
 	WRITE(FILLOG,*)'Calling initial conditions...'
@@ -31,19 +44,6 @@ Niger Source code with Write and/or Read initial conditions
 		
 ! Create flood_READHOT.f90 : For futur simulation, read file with initials conditions (flood_WHRITEHOT)
 
-! Process
-
-- To read initial condition, in SIMULA.f90
-	"if (1===1) then call flood_READHOT" 
-	"if (0===1) then call flood_WHRITEHOT"
-	
-- To write initial condition 		
-	"if (1===1) then call flood_WHRITEHOT" 
-	"if (0===1) then call flood_READHOT"
-
-- To write and read initial condition 
-	"if (1===1) then call flood_WHRITEHOT" 
-	"if (1===1) then call flood_READHOT"
 		
 
 		
